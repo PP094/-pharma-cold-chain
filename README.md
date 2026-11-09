@@ -10,11 +10,38 @@
 - MySQL (数据库设计)
 - 阿里云短信API
 
+## 当前版本：冷链监控 MVP
+
+已实现一个可运行的 Streamlit 看板，支持：
+
+- 内置示例数据和 CSV 温度数据上传
+- 温度上下限配置
+- 温度趋势、设备状态和告警分布展示
+- 超温/低温记录识别与告警表格
+- 监测记录、设备数量、告警率和平均温度等指标
+
+### 本地运行
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+CSV 文件需要包含 `timestamp`、`device_id`、`location`、`temperature` 四列。
+
+运行测试：
+
+```bash
+pytest
+```
+
 ## 项目进度
 - [x] 学习大纲制定（2026年3月5日）
 - [x] Pandas基础学习（2026年3月6日）
-- [ ] 数据清洗脚本开发（2026年3月9日）
-- [ ] 项目架构设计（2026年5月1日）
+- [x] 数据清洗脚本开发（2026年3月9日）
+- [x] 项目架构设计（2026年5月1日）
 
 ## 学习记录
 详细学习笔记见 [docs/](docs/) 目录
